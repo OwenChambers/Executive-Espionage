@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
         rb= GetComponent<Rigidbody>();
         groundCheck = transform.Find("GroundCheck");
         CurrentMoveSpeed = MOVESPEED;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
