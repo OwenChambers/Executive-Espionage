@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
@@ -11,6 +10,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float jumpSpeed;
     [SerializeField] float RotateSpeed = 100;
     [SerializeField] float GraviyMultiplyer = 2;
+
+    [SerializeField] List<GameObject> guns;
 
 
 
@@ -32,7 +33,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void FixedUpdate()
@@ -83,6 +84,14 @@ public class PlayerController : MonoBehaviour
         if (context.performed && IsGrounded())
         {
             rb.AddForce(Vector3.up * jumpSpeed);
+        }
+    }
+
+    public void Shoot(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            guns[0].GetComponent<GunController>().Shoot();
         }
     }
 
