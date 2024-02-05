@@ -28,6 +28,7 @@ public class PauseMenu : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         pauseMenu.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
+        Camera.main.gameObject.GetComponent<AudioSource>().volume /= 4;
         Time.timeScale = 0f;
         GamePaused = true;
     }
@@ -36,6 +37,7 @@ public class PauseMenu : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         pauseMenu.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
+        Camera.main.gameObject.GetComponent<AudioSource>().volume *= 4;
         Time.timeScale = 1f;
         GamePaused = false;
     }
