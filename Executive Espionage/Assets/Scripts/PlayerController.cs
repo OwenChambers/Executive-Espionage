@@ -11,7 +11,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float RotateSpeed = 100;
     [SerializeField] float GraviyMultiplyer = 2;
 
+    [Header("Player Items")]
     [SerializeField] List<GameObject> guns;
+    [SerializeField] List<GameObject> gadgets;
 
 
 
@@ -92,6 +94,14 @@ public class PlayerController : MonoBehaviour
         if (context.performed)
         {
             guns[0].GetComponent<GunController>().Shoot();
+        }
+    }
+
+    public void Gadget(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+        {
+            gadgets[0].GetComponent<GadgetController>().Activate();
         }
     }
 
