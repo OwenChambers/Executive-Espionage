@@ -1,0 +1,134 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcf7219bab7fe46a1ad266029b2fee19, type: 3}
+  m_Name: Readme
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: 421cdc65c3f7d25458aed4007c2dc508, type: 3}
+  title: Third Person Shooter Bundle
+  sections:
+  - heading: 
+    text: 
+    linkText: 
+    url: 
+    asset: 
+  - heading: 
+    text: Thank you for acquiring the <b>Third Person Shooter Bundle</b> for the
+      <i>Unity 3D</i> engine! This is your starter pack to instantly create your
+      own <i>third-person shooter</i>, with two modules included.
+    linkText: 
+    url: 
+    asset: 
+  - heading: Features
+    text: 
+    linkText: 
+    url: 
+    asset: 
+  - heading: 
+    text: "\u2611 The <b>Cover + Shooting System</b>, a third person <b>player controller</b>
+      featuring <i>covering</i> and <i>shooting</i> behaviors, besides the basic
+      player movements, <i>weapons</i> and inventory."
+    linkText: 
+    url: 
+    asset: 
+  - heading: 
+    text: "\u2611 The <b>Enemy AI</b>, a complete <b>AI</b> system with instantly
+      configurable enemy shooter <b>NPCs</b>, featuring a plug and play, expandable
+      <b>FSM</b> <i>(finite state machine)</i>."
+    linkText: 
+    url: 
+    asset: 
+  - heading: Get Started
+    text: 
+    linkText: 
+    url: 
+    asset: 
+  - heading: 
+    text: 
+    linkText: ' How to setup the player third-person controller'
+    url: https://youtu.be/f6kCN1ZHhVE
+    asset: 
+  - heading: 
+    text: 
+    linkText: How to setup the enemies in your shooter game
+    url: https://youtu.be/3Iv0K6d-iAI
+    asset: 
+  - heading: 
+    text: 
+    linkText: Building Custom FSMs for NPCs with Enemy AI
+    url: https://youtu.be/HuctrVdchpA
+    asset: 
+  - heading: More information
+    text: 
+    linkText: 
+    url: 
+    asset: 
+  - heading: 
+    text: 
+    linkText: Cover + Shooting System - <b>README</b>
+    url: 
+    asset: bf6e7d5111f5c2148a72c5a6db26efbc
+  - heading: 
+    text: 
+    linkText: Enemy AI - <b>README</b>
+    url: 
+    asset: 1e33362fc4c345c409eb1cebd4c11c13
+  - heading: 
+    text: 
+    linkText: Support
+    url: https://viniciusmarques.cods.dev/support?package=TPSBundle&ref=readme_package
+    asset: 
+  - heading: 
+    text: 
+    linkText: Official Topic - Unity Forum
+    url: https://forum.unity.com/threads/released-third-person-shooter-bundle.848050/
+    asset: 
+  - heading: 
+    text: 
+    linkText: Showcase video
+    url: https://youtu.be/463cyXyoT84
+    asset: 
+  - heading: Demo Scenes
+    text: 
+    linkText: 
+    url: 
+    asset: 
+  - heading: 
+    text: 
+    linkText: <b>TPSBundle</b>
+    url: 
+    asset: 9fc0d4010bbf28b4594072e72b8655ab
+  - heading: 
+    text: 
+    linkText: <b>FPS</b> - Enemy AI
+    url: 
+    asset: 3984c5d5fe985f946ada75ddae8e4786
+  - heading: 
+    text: 
+    linkText: <b>TopDown</b> - Enemy AI
+    url: 
+    asset: 1c3d95a776b27094f8b48dc051eea4e4
+  - heading: 
+    text: 
+    linkText: <b>LightGunShooter</b> - Enemy AI
+    url: 
+    asset: 69c1b66b47316aa4aa0a680404e5cce9
+  - heading: 
+    text: 
+    linkText: <b>Tutorial</b> - Cover + Shooting System
+    url: 
+    asset: d31e8311521e6cd4a9e167f1186198fd
+  - heading: 
+    text: 
+    linkText: <b>Time Trial</b> - Cover + Shooting System
+    url: 
+    asset: ec36776a77b6b5d4e8d9de5b4addeccb
+  loadedLayout: 1
