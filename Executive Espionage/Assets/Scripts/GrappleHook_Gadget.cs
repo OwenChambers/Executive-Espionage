@@ -111,8 +111,9 @@ public class GrappleHook_Gadget : GadgetController
     {
         if(isFiring)
         {
-            player.transform.LookAt(hit.point);
-            player.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * hookSpeed, ForceMode.Force);
+            Vector3 targetDirection = hit.point - transform.position;
+            player.GetComponent<Rigidbody>().velocity = targetDirection.normalized * hookSpeed;
+
             if (Vector3.Distance(player.transform.position, hit.point) < minDistance)
             {
                 Deactivate();

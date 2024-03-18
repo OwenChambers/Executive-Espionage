@@ -21,12 +21,12 @@ public class PlayerController : MonoBehaviour
     Transform groundCheck;
 
     Vector3 moveDirection;
-    Vector3 TargetDirection;
+    public Vector3 TargetDirection { get; private set; }
 
     // Start is called before the first frame update
     void Start()
     {
-        rb= GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
         groundCheck = transform.Find("GroundCheck");
         CurrentMoveSpeed = MOVESPEED;
         Cursor.lockState = CursorLockMode.Locked;
@@ -55,20 +55,20 @@ public class PlayerController : MonoBehaviour
         Vector3 forwardRelativeInput = moveDirection.y * forward;
         Vector3 rightRelativeInput = moveDirection.x * right;
         Vector3 cameraRelative = forwardRelativeInput + rightRelativeInput;
-        TargetDirection = new Vector3(cameraRelative.x * CurrentMoveSpeed, rb.velocity.y, cameraRelative.z * CurrentMoveSpeed);
-        if (rb.velocity.y < 0)
-        {
-            TargetDirection.y -= GraviyMultiplyer;
-        }
-        if (IsGrounded())
-        {
-            TargetDirection.y = -5;
-        }
+        TargetDirection = new Vector3(cameraRelative.x * CurrentMoveSpeed, rb.velocity.y - GraviyMultiplyer, cameraRelative.z * CurrentMoveSpeed);
+        //if (rb.velocity.y < 0)
+        //{
+        //    TargetDirection.y -= GraviyMultiplyer;
+        //}
+        //if (IsGrounded())
+        //{
+        //    TargetDirection.y = -5;
+        //}
         Rotate(forward);
     }
 
     private void Rotate(Vector3 forward)
-    { 
+    {
         Quaternion toRotate = Quaternion.LookRotation(forward, Vector3.up);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotate, RotateSpeed).normalized;
     }
@@ -99,7 +99,7 @@ public class PlayerController : MonoBehaviour
 
     public void Gadget(InputAction.CallbackContext context)
     {
-        if(context.performed)
+        if (context.performed)
         {
             gadgets[0].GetComponent<GadgetController>().Activate();
         }
