@@ -1,3 +1,4 @@
+using EnemyAI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,11 +35,16 @@ public class GunController : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(rayOrigin, cam.transform.forward, out hit, fireRange))
             {
+                if(hit.collider.gameObject.CompareTag("Enemy"))
+                {
+                    hit.collider.gameObject.GetComponent<EnemyHealth>().TakeDamage(hit.transform.position, cam.transform.forward,35, hit.collider);
+                }
                 GameObject currentHit =  Instantiate(hitEffect);
                 currentHit.transform.position = hit.point;
                 currentHit.transform.LookAt(rayOrigin);
                 StartCoroutine(RemoveHitEffect(currentHit));
             }
+
         }
     }
     IEnumerator RemoveHitEffect(GameObject hit)
